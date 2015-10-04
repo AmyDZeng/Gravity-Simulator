@@ -4,35 +4,39 @@
     android:layout_height="match_parent"
 
     android:background="@color/green"
-    >
-    <TextView
+    android:weightSum="1">
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Y"
         android:id="@+id/testText"
-        />
-    <TextView
+        /-->
+    <!--TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_below="@id/testText"
     android:text="Y"
     android:id="@+id/testTextMax"
-    />
+    /-->
 
-    <TextView
+    <!--TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/testTextMax"
         android:text="Y"
         android:id="@+id/testTextMin"
-        />
+        /-->
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lift Phone."
+        android:textSize="50dp"
+        android:text="One moment, calibrating ..."
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:id="@+id/instructions"
+        android:gravity="center"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.04"/>
+        android:layout_weight="0.45" />
 
 </LinearLayout>
