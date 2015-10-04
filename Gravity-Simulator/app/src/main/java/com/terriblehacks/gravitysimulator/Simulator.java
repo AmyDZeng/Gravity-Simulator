@@ -14,4 +14,14 @@ public class Simulator extends Activity {
 
         setContentView(R.layout.simulator);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }
