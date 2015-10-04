@@ -5,6 +5,27 @@
 
     android:background="@color/green"
     >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Y"
+        android:id="@+id/testText"
+        />
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/testText"
+    android:text="Y"
+    android:id="@+id/testTextMax"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/testTextMax"
+        android:text="Y"
+        android:id="@+id/testTextMin"
+        />
 
     <TextView
         android:layout_width="wrap_content"
