@@ -124,13 +124,13 @@ public class Simulator extends Activity implements SensorEventListener{
                     // check for lift
                     onReady();
 
-                    if( accel >= 2){
+                    if( accel >= 3){
                         lifted = true;
                     }
 
 
                 }
-                if(lifted == true && dropped == false){
+                if((curTime - initTime > 3000) && lifted == true && dropped == false){
                     onLift();
                     // check for drop
                     if (accel >= 10){
@@ -165,7 +165,7 @@ public class Simulator extends Activity implements SensorEventListener{
 
     public void onLift(){
         instructions = (TextView) findViewById(R.id.instructions);
-        instructions.setText("Drop it like it's hot");
+        instructions.setText("Open Fingers.");
     }
 
     public void onDrop(){
