@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.TextView;
 
 /**
  * Created by Malzberry on 10/4/2015.
@@ -19,6 +20,8 @@ public class Simulator extends Activity implements SensorEventListener{
     private long lastUpdate;
     //private static final int FALL_THRESHOLD;
     //private static final int LIFT_THRESHOLD;
+
+    TextView instructions;
     protected void onCreate(Bundle savedInstanceState){
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
@@ -63,4 +66,15 @@ public class Simulator extends Activity implements SensorEventListener{
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
+
+    public void onLift(){
+        instructions = (TextView) findViewById(R.id.instructions);
+        instructions.setText("Let Go.");
+    }
+
+    public void onDrop(){
+        instructions = (TextView) findViewById(R.id.instructions);
+        instructions.setText("Gravity Simulation Complete.");
+    }
+
 }
